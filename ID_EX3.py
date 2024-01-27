@@ -61,6 +61,3 @@ def print_dec():
         else:
             print(num)
         num = round(num + 0.1, 1)
-
-
-fib()
