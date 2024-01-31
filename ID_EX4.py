@@ -17,11 +17,11 @@ def donuts(count):
     equals or more than 10 or the number as a
     string if not.
     """
-    dLine = "Number of donuts: "
-    if (count >= 10):
-        return dLine + 'many'
+    d_line = "Number of donuts: "
+    if count >= 10:
+        return d_line + 'many'
     else:
-        return dLine + str(count)
+        return d_line + str(count)
 
 
 # B. both_ends
@@ -37,15 +37,15 @@ def both_ends(my_input):
     it returns a blank string.
     """
     length = len(my_input)
-    newStr = ''
-    if (length > 2):
-        newStr += my_input[0]
-        newStr += my_input[1]
-        newStr += my_input[-2]
-        newStr += my_input[-1]
-    elif (length == 2):
-        newStr = my_input
-    return newStr
+    new_str = ''
+    if length > 2:
+        new_str += my_input[0]
+        new_str += my_input[1]
+        new_str += my_input[-2]
+        new_str += my_input[-1]
+    elif length == 2:
+        new_str = my_input
+    return new_str
 
 
 # C. fix_start
@@ -64,18 +64,18 @@ def fix_start(my_input):
     unless it is replaced by char '*'
     """
     length = len(my_input)
-    newStr = ''
-    kChar = '*'
-    firstChar = my_input[0]
-    newStr += firstChar
+    new_str = ''
+    k_char = '*'
+    first_char = my_input[0]
+    new_str += first_char
     for i in range(1, length):
-        currentChar = my_input[i]
-        if (currentChar == firstChar):
-            newStr += kChar
+        current_char = my_input[i]
+        if current_char == first_char:
+            new_str += k_char
         else:
-            newStr += currentChar
+            new_str += current_char
 
-    return newStr
+    return new_str
 
 
 # D. MixUp
@@ -94,12 +94,12 @@ def mix_up(input1, input2):
     second chars in these two strings
     are swapped for one another.
     """
-    replaceFor1 = input2[:2]
-    continuationFor1 = input1[2:]
-    replaceFor2 = input1[:2]
-    continuationFor2 = input2[2:]
-    new1 = replaceFor1 + continuationFor1
-    new2 = replaceFor2 + continuationFor2
+    replace_for1 = input2[:2]
+    continuation_for1 = input1[2:]
+    replace_for2 = input1[:2]
+    continuation_for2 = input2[2:]
+    new1 = replace_for1 + continuation_for1
+    new2 = replace_for2 + continuation_for2
     new_str = new1 + " " + new2
     return new_str
 
