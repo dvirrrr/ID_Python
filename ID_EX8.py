@@ -1,21 +1,18 @@
 # Itai Dvir, 20240113
 
-def write_to_file():
+def write_to_file(filename, text):
     try:
-        words = ["hi", "everyone"]
-        with open('readme.txt', 'w') as file_handle:
-            for word in words:
-                file_handle.write(f"{word}\n")
+            with open(filename, 'w') as file_handle:
+                file_handle.write(f"{text}")
     except Exception as e:
         print(f"Error writing to file: {e}")
 
 
-def read_from_file():
+def read_from_file(filename):
     try:
-        with open('readme.txt') as file_handle:
-            lines = file_handle.readlines()
-            for line in lines:
-                print(line)
+        file_handle = open(filename, "r")
+        text = file_handle.read()
+        print(text)
     except FileNotFoundError:
         print("File not found.")
     except Exception as e:
